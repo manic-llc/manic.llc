@@ -1,0 +1,21 @@
+@mixin transition($variant: "base", $promote: true) {
+  @if $variant == "base" {
+    transition: var(--base-transition);
+  }
+
+  @if $variant == "short" {
+    transition: var(--short-transition);
+  }
+
+  @if $variant == "long" {
+    transition: var(--long-transition);
+  }
+
+  @if $variant == "hover" {
+    transition: var(--hover-transition);
+  }
+
+  @if $promote == true {
+    will-change: transform, opacity;
+  }
+}

@@ -1,0 +1,4 @@
+<template>
+  <Root />
+  <Background />
+</template>

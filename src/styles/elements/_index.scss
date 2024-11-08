@@ -1,0 +1,17 @@
+@use "../base" as *;
+@use "../functions" as *;
+
+$header-background: $white;
+$header-color: $black;
+$header-padding: 2;
+
+$card-background: transparent;
+$card-border-radius: 0.5rem;
+$card-border: 1px solid $gray;
+
+$header-background: $white;
+$header-color: $black;
+$header-padding: 2;
+$header-item-size: 40px;
+
+$body-background: linear-gradient(to bottom left, lighten($teal, 5%), darken($white, 5%));

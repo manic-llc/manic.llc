@@ -1,0 +1,17 @@
+@use "./_position.scss" as *;
+
+@mixin before($content: "") {
+  &:before {
+    @include position(absolute, 0 0 0 0, 1);
+    content: $content;
+    @content;
+  }
+}
+
+@mixin after($content: "") {
+  &:before {
+    @include position(absolute, 0 0 0 0, 1);
+    content: $content;
+    @content;
+  }
+}

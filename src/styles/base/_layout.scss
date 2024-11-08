@@ -1,0 +1,9 @@
+@use "../base/colors.scss" as *;
+
+$outer-padding: 2rem;
+$base-margin: 1rem;
+$border-radius: 0.5rem;
+$border-width: 1px;
+$border-type: solid;
+$border-color: rgba($primary-color, 0.05);
+$border: #{$border-width} #{$border-type} #{$border-color};

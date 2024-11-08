@@ -1,0 +1,44 @@
+@use "../base" as *;
+@use "../mixins" as *;
+@use "../elements" as *;
+
+$map: (
+  "outer-padding": $outer-padding,
+  "base-margin": $base-margin,
+  "border-radius": $border-radius,
+  "border-width": $border-width,
+  "border-type": $border-type,
+  "border-color": $border-color,
+  "border": $border-width,
+  "rust": $rust,
+  "black": $black,
+  "gray": $gray,
+  "teal": $teal,
+  "orange": $orange,
+  "white": $white,
+  "body-background": $body-background,
+  "header-background": $header-background,
+  "header-padding": $header-padding,
+  "header-color": $header-color,
+  "burgandy": $burgandy,
+  "primary-color": $primary-color,
+  "base-duration": $base-duration,
+  "hover-duration": $hover-duration,
+  "long-duration": $long-duration,
+  "short-duration": $short-duration,
+  "easing": $easing,
+  "base-transition": $base-transition,
+  "long-transition": $long-transition,
+  "short-transition": $short-transition,
+  "hover-transition": $hover-transition,
+  "card-background": $card-background,
+  "card-border-radius": $card-border-radius,
+  "card-border": $card-border,
+  "header-item-size": $header-item-size
+);
+
+@mixin initialize {
+  @include var-map($map);
+  @include reset;
+  @include movement;
+}

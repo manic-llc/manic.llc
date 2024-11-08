@@ -1,0 +1,51 @@
+@use "./flex.scss" as *;
+@use "./size.scss" as *;
+
+@mixin button-group {
+  ul {
+    @include flex(flex-start, flex-start, row);
+    width: fit-content;
+    background: var(--slate-900);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 1px 0 var(--pink-100);
+  }
+
+  button {
+    @include size(fit-content, 40px);
+    @include flex;
+    text-align: center;
+    min-width: 40px;
+    padding: 0 0.5rem;
+    background: transparent;
+    border-right: var(--border);
+
+    li:last-child & {
+      border-right: 0;
+    }
+
+    &:hover {
+      background: var(--pink-100);
+    }
+
+    &:active span {
+      transform: scale(0.5);
+    }
+  }
+
+  li,
+  button {
+    width: fit-content;
+  }
+
+  button,
+  span {
+    transition: var(--hover-transition);
+  }
+
+  span {
+    font-size: 0.8rem;
+    font-family: monospace;
+    color: white;
+  }
+}

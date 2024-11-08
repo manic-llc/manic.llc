@@ -1,0 +1,5 @@
+@mixin text-gradient($color, $color2, $dir: to bottom right) {
+  background: linear-gradient($dir, $color, $color2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

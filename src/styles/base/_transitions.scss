@@ -1,0 +1,11 @@
+@use "../mixins/var-map" as *;
+
+$base-duration: 350ms;
+$hover-duration: 150ms;
+$long-duration: 2500ms;
+$short-duration: 200ms;
+$easing: cubic-bezier(0.75, 0.02, 0.15, 0.99);
+$base-transition: all $base-duration $easing;
+$long-transition: all $long-duration $easing;
+$short-transition: all $short-duration $easing;
+$hover-transition: all $hover-duration linear;

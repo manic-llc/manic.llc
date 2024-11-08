@@ -1,0 +1,5 @@
+@use "../base/colors" as *;
+
+$card-background: linear-gradient(to top right, $black, $gray);
+$card-border-radius: 3rem;
+$card-border: 1px solid $gray;

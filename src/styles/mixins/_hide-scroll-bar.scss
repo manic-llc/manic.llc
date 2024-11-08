@@ -1,0 +1,13 @@
+@mixin hide-scroll-bar {
+  &::-webkit-scrollbar {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  &::scrollbar {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+}

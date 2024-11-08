@@ -1,0 +1,89 @@
+@mixin movement {
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(150px) scale(0.5);
+      transform-origin: center center;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0%) scale(1);
+    }
+  }
+
+  @keyframes fade-up-short {
+    0% {
+      opacity: 0;
+      transform: translateY(50px) scale(0.7);
+      transform-origin: center center;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0%) scale(1);
+    }
+  }
+
+  @keyframes fade-down {
+    0% {
+      opacity: 0;
+      transform: translateY(150px) scale(1.25);
+      transform-origin: center center;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0%) scale(1);
+    }
+  }
+
+  @keyframes fade-down-short {
+    0% {
+      opacity: 0;
+      transform: translateY(80px) scale(1.2);
+      transform-origin: center center;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0%) scale(1);
+    }
+  }
+
+  .fade-enter-from,
+  .fade-leave-to,
+  .view-enter-from,
+  .view-leave-to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+
+  .fade-enter-active,
+  .fade-leave-active,
+  .to-left-enter-active,
+  .to-left-leave-active,
+  .to-right-enter-active,
+  .to-right-leave-active {
+    transition: var(--long-transition);
+  }
+
+  .view-enter-active,
+  .view-leave-active {
+    transition: var(--long-transition);
+  }
+
+  $offset: 25%;
+
+  .to-left-enter-from,
+  .to-right-leave-to {
+    transform: translateX($offset);
+    opacity: 0;
+  }
+
+  .to-left-leave-to,
+  .to-right-enter-from {
+    transform: translateX(-#{$offset});
+    opacity: 0;
+  }
+}

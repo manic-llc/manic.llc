@@ -1,0 +1,7 @@
+@use "../base" as *;
+
+@mixin blur($blur: 1, $color: rgba($burgandy, 0.1)) {
+  background: $color;
+  -webkit-backdrop-filter: blur(calc(#{$blur} * var(--base-margin)));
+  backdrop-filter: blur(calc(#{$blur} * var(--base-margin)));
+}

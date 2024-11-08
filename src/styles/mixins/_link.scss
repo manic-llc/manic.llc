@@ -1,0 +1,35 @@
+@use './position' as *;
+@use './transition' as *;
+
+@mixin link($color, $hover-color, $active-color: $hover-color) {
+  color: $color;
+  transition: var(--hover-transition);
+  position: relative;
+
+  &:before {
+    @include position(absolute, 0 0 0 0);
+    @include transition(fast);
+    content: '';
+    background: linear-gradient(to top right, darken(#280015, 2%), lighten(#280015, 2%));
+    opacity: 0;
+    z-index:-1;
+    will-change: transform, opacity;
+  }
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &.router-link-exact-active {
+    border-color: transparent;
+    color: $active-color;
+
+    :deep(*) {
+      opacity: 1;
+    }
+
+    &:before {
+      opacity: 1;
+    }
+  }
+}

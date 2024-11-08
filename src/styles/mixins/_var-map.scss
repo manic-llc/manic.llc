@@ -1,0 +1,9 @@
+@mixin var-map($list) {
+  :root {
+    @each $item in $list {
+      $name: nth($item, 1);
+      $value: nth($item, 2);
+      --#{$name}: #{$value};
+    }
+  }
+}

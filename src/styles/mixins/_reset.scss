@@ -1,0 +1,36 @@
+@use "./_hide-scroll-bar.scss" as *;
+
+@mixin reset {
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    @include hide-scroll-bar;
+    width: 100%;
+    overflow: hidden;
+    height: calc(100% + env(safe-area-inset-top));
+  }
+
+  img,
+  canvas {
+    display: flex;
+  }
+}

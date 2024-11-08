@@ -1,3 +1,3 @@
-# scaffold
+# https://manic.llc
 
-UI Scaffolding: Vue 3 • TypeScript • Sass • Vite
+Just a humble landing page.
